@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciernagas Estaticas o Estrellas</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        @media (max-width:767px){
+            selector{
+                position:fixed;
+                top: 0px !important;
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+
+        selector{
+            height: 100vh;
+        }
+
+        .luciernagas {
+            position: absolute;
+            width: 100%;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+        }
+
+        .firefly {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 1.5s, background-color 1.5s, box-shadow 1.5s;
+        }
+
+        /* Clase para el resplandor */
+        .glow {
+            box-shadow: 0 0 10px lime, 0 0 20px #00ff00; /* color de resplando */
+        }
+    </style>
+</head>
+<body>
+    <div class="luciernagas"></div> <!-- Contenedor para las luciernagas -->
+    
+    <script>
+        const numberOfFireflies = 50; // Cambia este valor para modificar la cantidad de luciernagas
+
+        for (let i = 0; i < numberOfFireflies; i++) {
+            const firefly = document.createElement('div');
+            firefly.classList.add('firefly');
+
+            // Tamaño aleatorio entre 1px y 7px
+            const size = Math.random() * 4 + 1; //aleatorio entre 0 y 4 y se le suma 1 
+            firefly.style.width = `${size}px`;
+            firefly.style.height = `${size}px`;
+
+            // Posición aleatoria en la sección
+            const randomX = Math.random() * window.innerWidth;
+            const randomY = Math.random() * window.innerHeight;
+            firefly.style.left = `${randomX}px`;
+            firefly.style.top = `${randomY}px`;
+
+            document.querySelector('.luciernagas').appendChild(firefly);
+
+            // Animación de encendido y apagado
+            const flickerInterval = Math.random() * 5000 + 2000; // //aleatorio entre 0 y 3seg y se le suma 3seg
+            setInterval(() => {
+                firefly.style.opacity = 1;
+                firefly.style.backgroundColor = "#00ff00"; // Color cuando encienden
+                firefly.classList.add('glow'); // Añadir la clase de resplandor
+                setTimeout(() => {
+                    firefly.style.backgroundColor = "#ffffff"; //Color cuando apagan
+                    firefly.style.opacity = 0; // opacidad al Apagar (transparente)
+                    firefly.classList.remove('glow'); // Quitar la clase de resplandor
+                }, 1500); // Se apaga después de 1.5 segundos
+            }, flickerInterval);
+        }
+    </script>
+</body>
+</html>
