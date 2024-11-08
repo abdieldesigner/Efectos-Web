@@ -1,5 +1,69 @@
 #########################################
 
+borde en texto degradado dorado
+    .oro {
+        background-image: repeating-linear-gradient(
+        105deg,
+        #ffb338 0%,
+        #3e2904 5%,
+        #ffb338 12%
+        );
+        color: #363833;
+        filter: drop-shadow (5px 15px #000);
+        transform: scaleY(1.05);
+        position: relative;
+        font-weight: 900;
+        font-size: 10em;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 10px transparent;
+        -webkit-background-clip: text;
+    }
+
+
+#########################################
+
+cambiar la relacion de aspecto de un imagen
+
+    selector {
+        aspect-ratio: 5 / 7;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px;
+    }
+
+
+#########################################
+
+elemento no clikeables
+
+.no-click {
+    pointer-events: none; /* Desactiva interacciones del ratón */
+}
+
+img {
+    pointer-events: none; /* Desactiva interacciones del ratón para todas las imágenes */
+}
+
+#########################################
+
+animacion icono que gira
+    selector #id  {
+        animation: 10s linear infinite rodar;
+        transform-origin: center center;
+     }
+
+    @keyframes rodar  {
+        0%  {
+            transform: rotate(0)
+         }
+        100%  {
+            transform: rotate(360deg)
+         }    
+    }
+  
+
+#########################################
+
 animacion un elemento flota en el mismo lugar como dentro de una caja invisible - movimiento sutil
 
 selector {
@@ -7,6 +71,8 @@ selector {
     top: 320px;
     left: calc(50% - 40px);
     animation: 22s linear infinite move
+    animation-direction: reverse; /*para variar si son varios elementos Movimiento inverso */
+    animation-delay: 5s; /* Comienza 5 segundos después */
 }
 
 @keyframes move {
@@ -114,7 +180,7 @@ modificar el scrol bar barra de desplazmaiento
 #########################################
 
 
-ocultar el contenido horizontalmente manteniendo visible el vertical
+ocultar el contenido de unas seccion o contenedor horizontalmente manteniendo visible el vertical
 
     selector {
         overflow-x: clip;
@@ -423,6 +489,8 @@ ANIMACION BOTON DEGRADADO (el degradado se despalza horizontalmente)
 #########################################
 
 Animacion Boton (palpitante Pulso)
+
+    recordar añadir la clace para que funcione
 
     .boton-pulso .elementor-button{
         animation: onda 1.5s infinite;
@@ -2477,6 +2545,52 @@ Codigo un solo vidos reproduciendose a la vez.
 
 
 ###############################################################
+
+codigo que borra la web si no pagan (la pone con opaciidad en 0)
+
+    <style>
+        body {
+            transition: opacity 4s ease;
+        }
+        .mensaje-suspendido {
+            z-index: 99;
+            opacity: 1;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: red;
+            display: none; /* Oculto por defecto */
+        }
+    </style>
+
+<div class="mensaje-suspendido">Suspendido por falta de pagos</div>
+
+    <script>
+        const fechaLimite = new Date('2024-11-17');
+        const hoy = new Date();
+        const diasRestantes = Math.ceil((fechaLimite - hoy) / (1000 * 60 * 60 * 24));
+
+        if (diasRestantes <= 0) {
+            // Si la fecha límite ha pasado, ocultar el contenido
+            document.body.style.opacity = 0;
+            mostrarMensaje();
+        } else if (diasRestantes <= 5) {
+            // Si quedan 5 días o menos, reducir la opacidad
+            const nuevaOpacidad = 1 - (0.2 * (5 - diasRestantes));
+            document.body.style.opacity = nuevaOpacidad;
+
+            if (nuevaOpacidad <= 0) {
+                mostrarMensaje();
+            }
+        }
+
+        function mostrarMensaje() {
+            const mensaje = document.querySelector('.mensaje-suspendido');
+            mensaje.style.display = 'block';
+        }
+    </script>
 
 
 ###############################################################
