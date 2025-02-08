@@ -1,6 +1,19 @@
+repertorio de jhony:
+https://jhonnylubo.notion.site/Repertorio-de-c-digos-Escuela-1395141ee60d803dba9cc0e5f8c1ce84
+Respaldo:
+https://www.notion.so/Repertorio-de-c-digos-Escuela-13925d83621a8038af91c574130d2c47
+
+INFO
+Estructura: animation: nombreanimacion tiempo infinite;
+
+infinite (bucle), 
+
+
+buscar todo lo de una  web /?s=
+
 #########################################
 
-borde en texto degradado dorado
+borde gradiente en texto degradado dorado
     .oro {
         background-image: repeating-linear-gradient(
         105deg,
@@ -25,7 +38,7 @@ borde en texto degradado dorado
 cambiar la relacion de aspecto de un imagen
 
     selector {
-        aspect-ratio: 5 / 7;
+        aspect-ratio: 4 / 5;
         object-fit: cover;
         object-position: center;
         border-radius: 20px;
@@ -70,8 +83,8 @@ selector {
     position: absolute;
     top: 320px;
     left: calc(50% - 40px);
-    animation: 22s linear infinite move
-    animation-direction: reverse; /*para variar si son varios elementos Movimiento inverso */
+    animation: 22s linear infinite move;
+    animation-direction: reverse;     /*para variar si son varios elementos Movimiento inverso */
     animation-delay: 5s; /* Comienza 5 segundos después */
 }
 
@@ -180,11 +193,18 @@ modificar el scrol bar barra de desplazmaiento
 #########################################
 
 
-ocultar el contenido de unas seccion o contenedor horizontalmente manteniendo visible el vertical
+desbordamiento: ocultar el contenido o espacion de unas seccion o contenedor horizontalmente manteniendo visible el vertical
 
+opcion 1:
     selector {
         overflow-x: clip;
         overflow-y: visible;
+    }
+Opcion2: para toda la pagina
+    html,
+        body{
+        width:100%;
+        overflow-x:hidden;
     }
 
 #########################################
@@ -240,48 +260,47 @@ efecto resplandor parpadeante - rayo - destellos - luz que apaga y prende
 Witget Traductor Fuente: https://gtranslate.io/website-translator-widget
 
     <style>
-
-    .gt_float_switcher .gt-selected .gt-current-lang {
-                padding: 5px 5px !important;
-                color: #fff !important;
-                font-size: 14px !important;
-                font-weight: bold;
-            }
-            .gt_float_switcher img {
-                vertical-align: middle;
-                display: inline-block;
-                width: 25px !important;
-                height: auto;
-                margin: 0 5px 0 0;
-                border-radius: 3px;
-            }
-            .gt_float_switcher .gt-selected .gt-current-lang {
-                padding: 10px 15px;
-                color: #0c3630 !important;
-                font-size: 14px !important;
-                font-weight: bold;
-            }
-            .gt_float_switcher {
-                background: #fff0 !important;
-            }
-            .gt-selected {
-                font-family: 'Squada One' !important;
-                position: relative;
-                z-index: 888;
-                color: #0c3630 !important;
-                background-color: #00e000 !important;
-                cursor: pointer;
-                border-radius: 10px !important;
-                border: solid #0c3630 2px !important;
-                text-transform: uppercase;
-                overflow: hidden;
-                text-align: left;
-            }
+        .gt_float_switcher .gt-selected .gt-current-lang {
+            padding: 5px 5px !important;
+            color: #fff !important;
+            font-size: 14px !important;
+            font-weight: bold;
+        }
+        .gt_float_switcher img {
+            vertical-align: middle;
+            display: inline-block;
+            width: 25px !important;
+            height: auto;
+            margin: 0 5px 0 0;
+            border-radius: 3px;
+        }
+        .gt_float_switcher .gt-selected .gt-current-lang {
+            padding: 10px 15px;
+            color: #FFFFFF !important;
+            font-size: 14px !important;
+            font-weight: bold;
+        }
+        .gt_float_switcher {
+            background: #fff0 !important;
+        }
+        .gt-selected {
+            font-family: 'Poppins' !important;
+            position: relative;
+            z-index: 888;
+            color: #ffffff !important;
+            background-color: #290030 !important;
+            cursor: pointer;
+            border-radius: 10px !important;
+            border: solid #FFFFFF30 1px !important;
+            text-transform: uppercase;
+            overflow: hidden;
+            text-align: left;
+        }
 
     </style>
 
-    <div class="gtranslate_wrapper" style="position:fixed;bottom: 10px !important;left: 10px !important;z-index:999999;"></div>
-    <script>window.gtranslateSettings = {"default_language":"es","languages":["es","en","fr","it","pt"],"wrapper_selector":".gtranslate_wrapper"}</script>
+    <div class="gtranslate_wrapper" style="position:fixed;bottom: 10px !important;left: 10px !important;z-index:999999;></div>
+    <script>window.gtranslateSettings = {"default_language":"es","languages":["es","ca"],"wrapper_selector":".gtranslate_wrapper"}</script>
     <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 
@@ -371,6 +390,15 @@ Igual que el de arriba pero par auna sola seccion: Ocultar y mostrar un elemento
 
     </script>
 
+#########################################
+
+crear gradiante degradado que se aplique a un texto
+
+    .gradient, .gradient ul, .gradient .nav-menu-wrappe{
+        background: -webkit-linear-gradient(45deg, #553285, #2d7dd2, #26D07C, #FF7F32, #ef4782);
+      -webkit-background-clip: text;    
+      -webkit-text-fill-color: transparent;
+    }
 
 #########################################
 
@@ -2468,6 +2496,24 @@ desvanece los bordes laterales de todo el contenido o de un elemnto creando el e
          mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
     }
 
+###############################################################
+estello - Resplandor que flota en el fondo verticalmente. ajusatr la posicion y yoprefiero usar dos a cada  lado de diferente color para que no sean iguales, (suelo usar icono un circulo perfecto pero puede ser una foto del circulo, y el tamaño con VH)
+
+    selector {
+        position: absolute;
+        filter: blur(15vh);
+        animation: movevertidereiz 15s infinite; /* Animación */
+    }
+
+    @keyframes movevertidereiz {
+        0%, 100% {
+            bottom: 40vh;
+        }
+        50% {
+            bottom: -40vh;
+        }
+    }
+
 
 ###############################################################
 
@@ -2546,6 +2592,13 @@ Codigo un solo vidos reproduciendose a la vez.
 
 ###############################################################
 
+Borrar espacios extre en los texto de elementor
+    .elementor-text-editor p:last-child{ 
+     margin-bottom:0px;
+    }
+
+###############################################################
+
 codigo que borra la web si no pagan (la pone con opaciidad en 0)
 
     <style>
@@ -2595,5 +2648,201 @@ codigo que borra la web si no pagan (la pone con opaciidad en 0)
 
 ###############################################################
 
+aplica animacion hover sutir que destaca un elemento al hacer hover
+
+selector:hover {
+    position: relative;
+    transform: scale(1.1) rotate(7deg);
+}
 
 ###############################################################
+
+
+crear un efecto de ruido en movimiendo con la el gif de ruido,  este se aplica solo a un contenedor usando la clase noise
+.noise::after {
+    border-radius: 10px;
+    content: '';
+    background-image: url(https://canadadsgn.com.br/wp-content/uploads/2023/06/ruido-animado.gif);
+    background-size: 200px;
+    background-repeat: repeat; /* Repetir la imagen */
+    background-position: center center; /* Centrar la imagen */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.9; /* Opacidad al 70% */
+    mix-blend-mode: overlay; /* Modo de fusión */
+    z-index: 0;
+
+}
+
+###############################################################
+
+aplica un efecto de ruido en movimiento a toda la pagina
+.noise {
+    z-index: 1000;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    opacity: .12;
+    background-image: url(https://canadadsgn.com.br/wp-content/uploads/2023/06/ruido-animado.gif);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    mix-blend-mode: plus-lighter;
+}
+
+
+###############################################################
+
+Cinta con palabras que se desplazan
+
+<div class="lista-horizontal">
+    <h2>Diseñador Gráfico</h2>
+    <h2>Freelancer</h2>
+    <h2>Landing</h2>
+    <h2>Diseñador Web</h2>
+    <h2>Funnel</h2>
+    <h2>Creativo</h2>
+    <h2>Veloz</h2>
+    <h2>Wordpress</h2>
+    <h2>Paginas web</h2>
+    <h2>Flyer</h2>
+    <h2>Elementor</h2>
+    <h2>Logos</h2>
+    <h2>Guapo</h2>
+    <h2>CSS</h2>
+    <h2>Venezolano</h2>
+    <h2>Profesional</h2>
+    <h2>Originalidad</h2>
+    <h2>Rapido</h2>
+    <h2>Soñador</h2>
+    <!--duplico para tener mas-->
+    <h2>Diseñador Gráfico</h2>
+    <h2>Freelancer</h2>
+    <h2>Landing</h2>
+    <h2>Diseñador Web</h2>
+    <h2>Funnel</h2>
+    <h2>Creativo</h2>
+    <h2>Veloz</h2>
+    <h2>Wordpress</h2>
+    <h2>Paginas web</h2>
+    <h2>Flyer</h2>
+    <h2>Elementor</h2>
+    <h2>Logos</h2>
+    <h2>Guapo</h2>
+    <h2>CSS</h2>
+    <h2>Venezolano</h2>
+    <h2>Profesional</h2>
+    <h2>Originalidad</h2>
+    <h2>Rapido</h2>
+    <h2>Soñador</h2>
+</div>
+
+
+<style>
+    .lista-horizontal h2 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .lista-horizontal {
+        position: relative;
+        width: max-content;
+        animation: cinta 75s linear infinite;
+        padding: 13px; /* Elimina el padding */
+        padding-top: 12px;
+        display: flex; /* Muestra los elementos en línea */
+        scale: 2.1;
+    }
+
+    .lista-horizontal h2 {
+        color: var(--e-global-color-899c568);
+        font-size: 15px;
+        font-weight: 900;
+            line-height: 1;
+        text-transform: uppercase;
+        position: relative; /* Necesario para posicionar el símbolo */
+        margin: 0;
+        padding: 0;
+        margin-right: 30px; /* Espacio entre los elementos */
+        transform: translate(0%, 0%);
+    }
+
+    .lista-horizontal h2::before {
+        content: "✦"; /* Cambia esto por el símbolo que desees ★ ✦ ✶ ✰ ✪ ☆ ♡ ❆ ♥︎ ❤︎ 𓆩♡𓆪 ● ☢ ♛ ❀ ✿ ��⚡ */
+        position: absolute; /* Posiciona el símbolo */
+        top: 50%; /* Mueve el elemento al 50% de la altura del contenedor */
+        transform: translate(0%, -50%); /* Ajusta el elemento para centrarlo */
+        left: -18px; /* Ajusta la posición del símbolo */
+        font-size: 13px; /* Tamaño del símbolo */
+        color: var(--e-global-color-899c568); /* Color del símbolo */
+    }
+
+    .list2 {
+        filter: blur(1.5px);
+        animation-direction: reverse;
+    }
+
+    .list2 h2::before {
+        color: #00ff00 !important;
+    }
+
+    .list2 h2 {
+        color: #ffffff80 !important;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+
+    .parasvglista-horizontal li::before {
+        content: url('ruta/a/tu/icono.svg'); /* Cambia la ruta por la de tu SVG */
+        position: absolute;
+        left: -25px;
+        width: 20px; /* Ajusta el tamaño del SVG */
+        height: 20px; /* Ajusta el tamaño del SVG */
+    }
+
+    @keyframes cinta {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-58%);
+        }
+    }
+</style>
+
+
+###############################################################
+
+
+###############################################################
+
+
+
+###############################################################
+
+Referente: 
+
+https://dimasweb.com/links/
+
+https://canadadsgn.com.br/
+
+https://isdsgn.com.br/links/
+
+https://isdsgn.com.br/
+
+
+https://matheuslp.com.br/
+
+https://joaobuscarioli.com.br/links-uteis/
+
+https://ciparoni.com/lives/
+
+me gustan:
+
+https://rafafranco.com.br/

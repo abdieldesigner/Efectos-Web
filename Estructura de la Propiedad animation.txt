@@ -1,0 +1,48 @@
+Estructura de la Propiedad animation
+La propiedad animation se puede definir de la siguiente manera:
+
+animation: nombreanimacion tiempo modo-repeticion función-timing;
+
+nombreanimacion: Este es el nombre que le das a los keyframes que has definido. Por ejemplo, si tienes un conjunto de keyframes llamado mover, usarías animation: mover 2s;.
+
+tiempo: Este es el tiempo que tardará la animación en completarse. Se puede especificar en segundos (s) o milisegundos (ms). Por ejemplo, 2s significa que la animación durará dos segundos.
+
+modo-repeticion: Este parámetro determina cuántas veces se repetirá la animación. Los valores más comunes son:
+	normal: la animación se reproduce una vez.
+	infinite: la animación se repetirá indefinidamente.
+	alternate: la animación alterna entre la dirección normal y la inversa en cada repetición.
+
+
+Función de Temporización (Timing Function)
+
+La función de temporización controla la velocidad de la animación a lo largo del tiempo. Algunos de los valores más utilizados son:
+linear: La animación tiene una velocidad constante desde el inicio hasta el final.
+	
+	linear: La animación tiene una velocidad constante desde el inicio hasta el final.
+	ease: La animación comienza lentamente, acelera en el medio y luego desacelera al final.
+	ease-in: La animación comienza lentamente y luego acelera.
+	ease-out: La animación comienza rápidamente y luego desacelera al final.
+	ease-in-out: La animación comienza y termina lentamente, pero es más rápida en el medio.
+	cubic-bezier(n,n,n,n)- Le permite definir sus propios valores en una función cúbica-bezier
+
+Ejemplo Completo
+Aquí tienes un ejemplo completo de cómo se vería una animación en CSS:
+
+@keyframes mover {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.elemento {
+  animation: mover 2s infinite alternate ease-in-out;
+}
+
+
+En este ejemplo, el elemento se moverá de su posición original a 100 píxeles a la derecha en un tiempo de 2 segundos, repitiéndose indefinidamente y alternando la dirección de movimiento, con una aceleración y desaceleración suave.
+
+Conclusión
+Las animaciones en CSS son una herramienta poderosa para mejorar la experiencia del usuario en la web. Al comprender cómo funcionan los keyframes, los tiempos, los modos de repetición y las funciones de temporización, puedes crear efectos visuales atractivos y dinámicos en tus proyectos.
